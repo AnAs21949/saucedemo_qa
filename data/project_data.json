@@ -1,0 +1,82 @@
+{
+  "valid_credentials": [
+    {
+      "user_name": "standard_user",
+      "password": "secret_sauce",
+      "first_name": "Anas",
+      "last_name": "Alhajri",
+      "postal_code": "12345",
+      "product_name": "Sauce Labs Backpack"
+    },
+    {
+      "user_name": "performance_glitch_user",
+      "password": "secret_sauce",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "postal_code": "67890",
+      "product_name": "Sauce Labs Bike Light"
+    }
+  ],
+  "invalid_credentials": [
+    {
+      "user_name": "invalid_user",
+      "password": "invalid_password",
+      "expected_error": "Epic sadface: Username and password do not match any user in this service"
+    },
+    {
+      "user_name": "standard_user",
+      "password": "wrong_password",
+      "expected_error": "Epic sadface: Username and password do not match any user in this service"
+    }
+  ],
+  "locked_out_user": {
+    "user_name": "locked_out_user",
+    "password": "secret_sauce",
+    "expected_error": "Epic sadface: Sorry, this user has been locked out."
+  },
+  "empty_login_cases": [
+    {
+      "user_name": "",
+      "password": "",
+      "expected_error": "Epic sadface: Username is required"
+    },
+    {
+      "user_name": "standard_user",
+      "password": "",
+      "expected_error": "Epic sadface: Password is required"
+    },
+    {
+      "user_name": "",
+      "password": "secret_sauce",
+      "expected_error": "Epic sadface: Username is required"
+    }
+  ],
+  "products": [
+    { "name": "Sauce Labs Backpack", "price": 29.99 },
+    { "name": "Sauce Labs Bike Light", "price": 9.99 },
+    { "name": "Sauce Labs Bolt T-Shirt", "price": 15.99 },
+    { "name": "Sauce Labs Fleece Jacket", "price": 49.99 },
+    { "name": "Sauce Labs Onesie", "price": 7.99 },
+    { "name": "Test.allTheThings() T-Shirt (Red)", "price": 15.99 }
+  ],
+  "checkout_empty_field_cases": [
+    {
+      "first_name": "",
+      "last_name": "Smith",
+      "postal_code": "12345",
+      "expected_error": "Error: First Name is required"
+    },
+    {
+      "first_name": "John",
+      "last_name": "",
+      "postal_code": "12345",
+      "expected_error": "Error: Last Name is required"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Smith",
+      "postal_code": "",
+      "expected_error": "Error: Postal Code is required"
+    }
+  ]
+}
