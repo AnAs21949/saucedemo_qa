@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: "3.13"
       - name: Install dependencies
-        run: pip install playwright pytest allure-pytest
+        run: pip install -r playwright_tests/requirements.txt
       - name: Install browsers
         run: playwright install --with-deps chromium
       - name: Run Playwright tests
