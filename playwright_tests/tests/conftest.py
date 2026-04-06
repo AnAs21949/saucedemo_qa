@@ -2,6 +2,8 @@ import pytest
 from playwright.sync_api import sync_playwright
 from playwright_tests.pages.login_page import LoginPage
 
+def pytest_addoption(parser):
+    parser.addoption("--headless", action="store_true", default=False)
 
 @pytest.fixture(scope="session")
 def browser():
