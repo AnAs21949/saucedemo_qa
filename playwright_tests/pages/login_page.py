@@ -19,3 +19,6 @@ class LoginPage(BasePage):
 
     def get_error_message(self):
         return self.page.locator("h3[data-test='error']").inner_text()
+
+    def error_locator(self):
+        return self.page.locator("h3[data-test='error']")
