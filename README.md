@@ -38,6 +38,20 @@ The 43 test cases are distributed across 5 functional areas, mapped to 4 Jira ep
 
 ---
 
+## Project management — Jira
+
+The entire project was planned and tracked in a Jira Scrum board before any code was written. The backlog contains 13 user stories organized under 4 epics (Authentication, Product Catalog, Cart Management, Checkout), each with acceptance criteria in Given/When/Then format and linked test cases.
+
+**Sprint backlog — 13 user stories mapped to epics:**
+
+![Jira backlog](docs/jira-backlog.png)
+
+**User story detail — acceptance criteria with Given/When/Then:**
+
+![Jira user story](docs/jira-user-story.png)
+
+---
+
 ## Project structure
 
 ```
